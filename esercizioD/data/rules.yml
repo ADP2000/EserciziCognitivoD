@@ -1,0 +1,64 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate Play Form 1
+  steps:
+  - intent: gioco_1
+  - action: play_form
+  - active_loop: play_form
+
+- rule: Submit Play Form 1
+  condition: 
+    - active_loop: play_form
+  steps: 
+    - action: play_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_livello_terminato
+    - action: utter_ask_continue2
+
+- rule: Activate Play Form 2
+  steps:
+  - intent: gioco_2
+  - action: play_level2_form
+  - active_loop: play_level2_form
+
+- rule: Submit Play Form 2
+  condition: 
+    - active_loop: play_level2_form
+  steps: 
+    - action: play_level2_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_livello_terminato
+    - action: utter_ask_continue3
+
+- rule: Activate Play Form 3
+  steps:
+  - intent: gioco_3
+  - action: play_level3_form
+  - active_loop: play_level3_form
+
+- rule: Submit Play Form 3
+  condition: 
+    - active_loop: play_level3_form
+  steps: 
+    - action: play_level3_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: utter_gioco_finito
+    - action: utter_restart

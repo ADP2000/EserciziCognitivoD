@@ -1,0 +1,114 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - ciao
+    - buongiorno
+    - buonasera
+    - salve
+    - ciao,sono [Antonio](name)
+    - salve, mi chiamo [Antonio](name)
+    - ciao sono [antonio](name)
+- intent: goodbye
+  examples: |
+    - arrivederci
+    - alla prossima volta
+    - ci vediamo presto
+    - addio
+    - grazie e arrivederci
+    - ciao ciao
+- intent: affirm
+  examples: |
+    - si
+    - s
+    - si mi va
+    - certo
+    - certamente
+    - corretto
+- intent: deny
+  examples: |
+    - no
+    - n
+    - mai
+    - no, grazie
+    - non mi piace giocare
+    - in realta' no
+    - in questo momento no
+    - adesso no
+- intent: mood_great
+  examples: |
+    - molto bene
+    - bene
+    - mi sento splenditamente bene
+    - tutto ok
+    - oggi sto molto bene
+    - mi sento in forma
+    - sono molto felice
+    - ottimamente
+    - bene grazie
+- intent: gioco_1
+  examples: |
+    - giochiamo
+    - si, giochiamo
+    - ok, giochiamo
+- intent: smetti_gioco
+  examples: |
+    - non voglio più giocare
+    - basta giocare
+    - vado via
+    - grazie per avermi fatto giocare
+    - non voglio piu giocare
+- intent: voglio_continuare
+  examples: |
+    - voglio continuare a giocare
+    - continiuamo a giocare
+    - si continuiamo
+- intent: numero_parole
+  examples: |
+    - [1](numero_palla)
+    - [2](numero_palla)
+    - [3](numero_palla)
+    - [4](numero_palla)
+    - [5](numero_palla)
+    - [6](numero_palla)
+    - [7](numero_palla)
+    - [3](numero_palla)
+- intent: numero_m
+  examples: |
+    - [1 mela](numero_mele)
+    - [2 mele](numero_mele)
+    - [3 mele](numero_mele)
+    - [4 mele](numero_mele)
+    - [5 mele](numero_mele)
+    - [6 mele](numero_mele)
+    - [7 mele](numero_mele)
+- intent: numero_oggetti
+  examples: |
+    - [1 casa](numero)
+    - [2 case](numero)
+    - [3 case](numero)
+    - [4 case](numero)
+    - [5 case](numero)
+    - [6 case](numero)
+    - [7 case](numero)
+- intent: gioco_2
+  examples: |
+    - ricominciamo
+    - si ricominciamo
+    - ok ricominciamo
+- intent: gioco_3
+  examples: |
+    - finiamo
+    - si finiamo
+    - ok finiamo
+- intent: bot_challenge
+  examples: |
+    - sei un bot?
+    - sei un uomo?
+    - sto parlando con un bot?
+    - sto parlando con un uomo?
+    - con chi sto parlando?
+- intent: restart
+  examples: |
+    - restart
+    - restart la conversazione
